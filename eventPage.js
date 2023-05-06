@@ -20,28 +20,7 @@ async function getTokenInfo() {
         <p class="info_token"><span class="boldd">Transfers Count:</span> ${data.transfersCount}</p>
         <p class="info_token"><span class="boldd">Holders Count:</span> ${data.holdersCount}</p>`;
 
-        const greenCircle = document.createElement('div');
-
-        greenCircle.style.width = '50px';
-        greenCircle.style.height = '50px';
-        greenCircle.style.borderRadius = '50%';
-        greenCircle.style.backgroundColor = 'green';
-        greenCircle.style.margin = 'auto';
-
-
-        if (data.holdersCount < 300) {
-            holdersStatus = "Low";
-            greenCircle.style.backgroundColor = 'red';
-        } else if (data.holdersCount < 500) {
-            holdersStatus = "Medium";
-            greenCircle.style.backgroundColor = 'yellow';
-        } else {
-            holdersStatus = "Very good";
-        }
-
-        result.prepend(greenCircle);
-        const holdersStatusElem = document.getElementById("holders-status");
-        holdersStatusElem.innerHTML = `<p>Token Status: ${holdersStatus}</p>`;
+       
     } catch (error) {
         console.log(error);
     }
