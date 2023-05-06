@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Safetension",
+  "version": "1.2",
+  "description": "This extension analyses all contracts",
+  "background": {
+    "service_worker": "eventPage.js"
+  },
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

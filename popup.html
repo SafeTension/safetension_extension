@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeTension</title>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="title"><img src="./logo.png" alt=""></h1>
+        <form>
+            <label for="token-address">Tokens ERC20<br>Checker</label><br>
+            <input type="text" id="token-address" class="text_input" placeholder="Enter ERC20 Token Address"
+                name="token-address" required><br>
+            <button type="button" id="myButton" class="get_button button-26">Get Token Info</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <style>
+        .title img {
+            max-width: 209px;
+            margin-bottom: 15px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        :focus,
+        :active {
+            outline: none;
+        }
+
+        a:focus,
+        a:active {
+            outline: none;
+        }
+
+        nav,
+        footer,
+        header,
+        aside {
+            display: block;
+        }
+
+        html,
+        body {
+            font-family: 'Montserrat', sans-serif;
+
+            text-align: center;
+            font-size: 100%;
+            line-height: 1;
+            font-size: 14px;
+            -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        input,
+        button,
+        textarea {
+            font-family: inherit;
+        }
+
+        input::-ms-clear {
+            display: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button::-moz-focus-inner {
+            padding: 0;
+            border: 0;
+        }
+
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: 400;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+        .title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 30px;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+
+        .content {
+            width: 350px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        label {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #000000;
+
+        }
+
+        .text_input {
+            margin-top: 20px;
+            width: 70%;
+            border: 1.5px solid #E6EAEE;
+            border-radius: 16px;
+            padding: 15px 15px;
+        }
+
+        .button-26 {
+            margin-top: 10px;
+            color: white;
+            font-weight: 600;
+            width: 70%;
+            background: #8980F5;
+            border-radius: 16px;
+            padding: 15px 15px;
+            margin-bottom: 20px;
+        }
+
+        .info_token {
+            max-width: 250px;
+            margin: 0 auto;
+            margin-bottom: 16px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        #holders-status {
+            margin: 10px 0px 25px 0px;
+        }
+
+        .boldd {
+            font-weight: 600;
+        }
+    </style>
+    <script src="./eventPage.js"></script>
+</body>
+
+</html>
