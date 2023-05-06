@@ -1,6 +1,6 @@
 async function getTokenInfo() {
     const tokenAddress = document.getElementById("token-address").value;
-    const apiUrl = `https://api.ethplorer.io/getTokenInfo/${tokenAddress}?apiKey=EK-nL2NR-J15w553-JN3wj`;
+    const apiUrl = `https://api.ethplorer.io/getTokenInfo/${tokenAddress}?apiKey=YOUR_TOKEN`;
 
     try {
         const response = await fetch(apiUrl);
@@ -20,28 +20,25 @@ async function getTokenInfo() {
         <p class="info_token"><span class="boldd">Transfers Count:</span> ${data.transfersCount}</p>
         <p class="info_token"><span class="boldd">Holders Count:</span> ${data.holdersCount}</p>`;
 
-        // Determine the status of holders
         const greenCircle = document.createElement('div');
 
-        // set the CSS properties for the circle
         greenCircle.style.width = '50px';
         greenCircle.style.height = '50px';
         greenCircle.style.borderRadius = '50%';
         greenCircle.style.backgroundColor = 'green';
         greenCircle.style.margin = 'auto';
 
-        // set the holdersStatus variable based on the number of holders
+
         if (data.holdersCount < 300) {
             holdersStatus = "Low";
-            greenCircle.style.backgroundColor = 'red'; // make the circle red if the holders count is less than 10
+            greenCircle.style.backgroundColor = 'red';
         } else if (data.holdersCount < 500) {
             holdersStatus = "Medium";
-            greenCircle.style.backgroundColor = 'yellow'; // make the circle yellow if the holders count is between 10 and 50
+            greenCircle.style.backgroundColor = 'yellow';
         } else {
             holdersStatus = "Very good";
         }
 
-        // append the circle to the result element
         result.prepend(greenCircle);
         const holdersStatusElem = document.getElementById("holders-status");
         holdersStatusElem.innerHTML = `<p>Token Status: ${holdersStatus}</p>`;
